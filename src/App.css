@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080b13;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.topbar {
+  height: 75px;
+  background: #101522;
+  border-bottom: 2px solid #ed182d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+}
+
+.topbar h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 27px;
+  color: white;
+}
+
+.topbar h1 span {
+  color: #ed182d;
+}
+
+.live {
+  color: #ff3549;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.live-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+.date {
+  color: #aaa;
+  font-size: 13px;
+}
+
+@keyframes blink {
+  50% { opacity: 0.2; }
+}
+
+/* WELCOME PAGE */
+
+.welcome {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, #222b42 0%, #080b13 65%);
+  position: relative;
+}
+
+.welcome-content {
+  padding: 30px;
+}
+
+.studio-icon {
+  font-size: 85px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  color: #ff3549;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.welcome h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(38px, 7vw, 75px);
+  margin: 25px 0;
+  line-height: 1.3;
+}
+
+.welcome h1 span {
+  color: #ed182d;
+}
+
+.welcome-content > p:last-of-type {
+  color: #b5bdcc;
+  margin-bottom: 35px;
+}
+
+.welcome button {
+  background: #ed182d;
+  color: white;
+  border: none;
+  padding: 17px 38px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 25px #ed182d66;
+}
+
+.welcome button:hover {
+  background: white;
+  color: #ed182d;
+  transform: scale(1.08);
+}
+
+/* BREAKING NEWS */
+
+.breaking {
+  display: flex;
+  align-items: center;
+  background: #ed182d;
+  min-height: 48px;
+  overflow: hidden;
+}
+
+.breaking strong {
+  background: #090b12;
+  padding: 14px 22px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.breaking marquee {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* NEWS STUDIO */
+
+.studio {
+  padding: 35px 5%;
+  background: linear-gradient(135deg, #111a2c, #090b13);
+  text-align: center;
+}
+
+.studio-label {
+  display: inline-block;
+  color: #ff3549;
+  border: 1px solid #ff3549;
+  padding: 8px 25px;
+  letter-spacing: 4px;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 35px;
+}
+
+.reporters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.reporter {
+  width: 180px;
+  padding: 20px;
+  background: #1a2438;
+  border: 1px solid #39445c;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.reporter:hover {
+  transform: translateY(-10px);
+  border-color: #ff3549;
+}
+
+.character {
+  font-size: 95px;
+  animation: reporterMove 3s infinite ease-in-out;
+}
+
+@keyframes reporterMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.reporter h2 {
+  color: #ff3549;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 17px;
+  margin: 12px 0 5px;
+}
+
+.reporter p {
+  font-size: 12px;
+  color: #aeb8cc;
+}
+
+.news-screen {
+  width: 350px;
+  min-height: 280px;
+  background: linear-gradient(135deg, #ed182d, #650918);
+  border: 5px solid #3d4658;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 35px #ed182d55;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.news-screen h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.news-screen p {
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.screen-bottom {
+  background: #090b12;
+  padding: 9px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.anchor-text {
+  margin-top: 35px;
+  padding: 25px;
+  background: #151e30;
+  border-left: 5px solid #ed182d;
+}
+
+.anchor-text h2 {
+  margin-bottom: 12px;
+}
+
+.anchor-text p {
+  color: #b5bdcc;
+}
+
+/* HEADLINES */
+
+.headlines {
+  padding: 55px 6%;
+}
+
+.headlines > h2 {
+  border-left: 5px solid #ed182d;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.news-grid article {
+  background: #151e30;
+  border: 1px solid #29364c;
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.news-grid article:hover {
+  transform: translateY(-7px);
+  border-color: #ed182d;
+}
+
+.news-grid article span {
+  color: #ff3549;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.news-grid article h3 {
+  margin: 18px 0 10px;
+}
+
+.news-grid article p {
+  color: #aab3c3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+footer {
+  background: #101522;
+  padding: 25px;
+  text-align: center;
+  color: #8792a8;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .topbar h1 {
+    font-size: 18px;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .reporters {
+    gap: 15px;
+  }
+
+  .news-screen {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .reporter {
+    width: 145px;
+  }
+}
+.voice-btn {
+  margin-top: 20px;
+  padding: 13px 25px;
+  background: #ed182d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.voice-btn:hover {
+  background: white;
+  color: #ed182d;
+  transform: scale(1.05);
+}
+.news-grid article a {
+  display: inline-block;
+  margin-top: 18px;
+  color: #ff3549;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-grid article a:hover {
+  color: white;
+}
+
+.news-grid article h3 {
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
